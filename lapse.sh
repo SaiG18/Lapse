@@ -10,7 +10,7 @@
 # <bitbar.desc>Progress Bar of Day, Week, Month, Year, and Life.</bitbar.desc>
 # <bitbar.dependencies>bash</bitbar.dependencies>
 
-#Aesthetics
+#Design
 width=20
 fill_char="▄"
 empty_char="__"
