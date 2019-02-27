@@ -21,29 +21,29 @@ bitbar="size=15 color=white font='Avenir'"
 now=$(date +%s)
 
 #Year
-Y_start=$(date -j 01010000 +%s)
-Y_end=$(date -jr "$Y_start" -v +1y +%s)
-Y_progress=$(
-echo "($now - $Y_start) * 100 / ($Y_end - $Y_start)" | bc -l
+yearStart=$(date -j 01010000 +%s)
+yearEnd=$(date -jr "$yearStart" -v +1y +%s)
+yearProgress=$(
+echo "($now - $yearStart) * 100 / ($yearEnd - $yearStart)" | bc -l
 )
 
 #Month
-m_start=$(date -j "$(date +%m)010000" +%s)
-m_end=$(date -jr "$m_start" -v +1m +%s)
-m_progress=$(
-echo "($now - $m_start) * 100 / ($m_end - $m_start)" | bc -l
+monthStart=$(date -j "$(date +%m)010000" +%s)
+monthEnd=$(date -jr "$monthStart" -v +1m +%s)
+monthProgress=$(
+echo "($now - $monthStart) * 100 / ($monthEnd - $monthStart)" | bc -l
 )
 
 #Day
-d_start=$(date -j "$(date +%m%d)0000" +%s)
-d_end=$(date -jr "$d_start" -v +1d +%s)
-d_progress=$(
-echo "($now - $d_start) * 100 / ($d_end - $d_start)" | bc -l
+dayStart=$(date -j "$(date +%m%d)0000" +%s)
+dayEnd=$(date -jr "$dayStart" -v +1d +%s)
+dayProgress=$(
+echo "($now - $dayStart) * 100 / ($dayEnd - $dayStart)" | bc -l
 )
 
 #Week
 week_start=$(date +%u)
-w_progress=$(
+weekProgress=$(
 echo "($week_start) * 100 / (7)" | bc -l
 )
 
@@ -52,7 +52,7 @@ echo "($week_start) * 100 / (7)" | bc -l
 presentYear=$(date +%Y-2001)
 presentMonth=$(date +%m/12)
 l_expected=80
-l_progress=$(
+lifeProgress=$(
 echo "( $presentYear + $presentMonth) * 100 /($l_expected)" | bc -l
 )
 
@@ -66,29 +66,29 @@ printf "$fill_char%0.s" $(seq "$filled")
 printf "$empty_char%0.s" $(seq "$empty")
 }
 
-echo "Day: $(round "$d_progress")%"
+echo "Day: $(round "$dayProgress")%"
 echo ---
 
 # day + progress bar
-echo "Day: $(round "$d_progress")%   | $bitbar"
-echo "$(progress "$d_progress")      | $bitbar"
+echo "Day: $(round "$dayProgress")%   | $bitbar"
+echo "$(progress "$dayProgress")      | $bitbar"
 
 # week + progress bar
 echo " | $bitbar"
-echo "Week: $(round "$w_progress")%   | $bitbar"
-echo "$(progress "$w_progress")       | $bitbar"
+echo "Week: $(round "$weekProgress")%   | $bitbar"
+echo "$(progress "$weekProgress")        | $bitbar"
 
 # month + progress bar
 echo " | $bitbar"
-echo "Month: $(round "$m_progress")%   | $bitbar"
-echo "$(progress "$m_progress")        | $bitbar"
+echo "Month: $(round "$monthProgress")%   | $bitbar"
+echo "$(progress "$monthProgress")        | $bitbar"
 
 # year + progress bar
 echo " | $bitbar"
-echo "Year: $(round "$Y_progress")%   | $bitbar"
-echo "$(progress "$Y_progress")       | $bitbar"
+echo "Year: $(round "$yearProgress")%   | $bitbar"
+echo "$(progress "$yearProgress")       | $bitbar"
 
 # life + progress bar
 echo " | $bitbar"
-echo "Life: $(round "$l_progress")%   | $bitbar"
-echo "$(progress "$l_progress")       | $bitbar"
+echo "Life: $(round "$lifeProgress")%   | $bitbar"
+echo "$(progress "$lifeProgress")       | $bitbar"
