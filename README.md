@@ -4,6 +4,7 @@
 
 #### Install Bitbar
     $ brew cask install bitbar
+    $ git clone https://github.com/SaiG18/Lapse.git
 
 #### Adding Plugins
 - Open Bitbar and select Change Plugin Directory
