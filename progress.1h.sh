@@ -49,10 +49,11 @@ echo "($week_start) * 100 / (7)" | bc -l
 
 #Life
 #Assuming Birth Year is 2000
-presentYear=$(date +%Y-2000)
+presentYear=$(date +%Y-2001)
+presentMonth=$(date +%m/12)
 l_expected=80
 l_progress=$(
-echo "($presentYear) * 100 /($l_expected)" | bc -l
+echo "( $presentYear + $presentMonth) * 100 /($l_expected)" | bc -l
 )
 
 round() { printf %.0f "$1"; }
