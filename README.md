@@ -3,11 +3,11 @@
 # Setup
 
 #### Install Bitbar
-$ brew cask install bitbar
+    $ brew cask install bitbar
 
 #### Adding Plugins
-    - Open Bitbar and select Change Plugin Directory
-    - Choose the directory where lapse.30m.sh is saved
+- Open Bitbar and select Change Plugin Directory
+- Choose the directory where lapse.30m.sh is saved
 
 
 
