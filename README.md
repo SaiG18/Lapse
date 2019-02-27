@@ -1,6 +1,6 @@
 # Lapse - Life Progress Menu Bar App for macOS
 
-# Setup
+## Setup
 
 #### Install Bitbar
     $ brew cask install bitbar
