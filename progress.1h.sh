@@ -49,9 +49,10 @@ echo "($week_start) * 100 / (7)" | bc -l
 
 #Life
 #Assuming Birth Year is 2000
-l_start=$(date +%u)
+presentYear=$(date +%Y-2000)
+l_expected=80
 l_progress=$(
-echo "($week_start) * 100 / (7)" | bc -l
+echo "($presentYear) * 100 /($l_expected)" | bc -l
 )
 
 round() { printf %.0f "$1"; }
@@ -71,7 +72,7 @@ echo ---
 echo "Day: $(round "$d_progress")%   | $bitbar"
 echo "$(progress "$d_progress")      | $bitbar"
 
-# month + progress bar
+# week + progress bar
 echo " | $bitbar"
 echo "Week: $(round "$w_progress")%   | $bitbar"
 echo "$(progress "$w_progress")        | $bitbar"
