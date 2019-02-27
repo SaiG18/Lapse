@@ -14,9 +14,9 @@
 
 width=20
 fill_char="▄"
-empty_char=""
+empty_char="__"
 
-bitbar="size=14 color=white font='Avenir'"
+bitbar="size=15 color=white font='Avenir'"
 
 now=$(date +%s)
 
@@ -75,7 +75,7 @@ echo "$(progress "$d_progress")      | $bitbar"
 # week + progress bar
 echo " | $bitbar"
 echo "Week: $(round "$w_progress")%   | $bitbar"
-echo "$(progress "$w_progress")        | $bitbar"
+echo "$(progress "$w_progress")       | $bitbar"
 
 # month + progress bar
 echo " | $bitbar"
