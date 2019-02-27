@@ -8,7 +8,10 @@
 # <bitbar.author>SaiG18</bitbar.author>
 # <bitbar.author.github>SaiG18</bitbar.author.github>
 # <bitbar.desc>Progress Bar of Day, Week, Month, Year, and Life.</bitbar.desc>
+# <bitbar.image>http://www.hosted-somewhere/pluginimage</bitbar.image>
 # <bitbar.dependencies>bash</bitbar.dependencies>
+# <bitbar.abouturl>http://github.com/SaiG18/</bitbar.abouturl>
+
 
 #Design
 width=20
