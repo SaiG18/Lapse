@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 # Lapse: Progress Bar of Day, Week, Month, Year, and Life
 #
-# by Sai G (http://github.com/SaiG18)
+# By Sai G (http://github.com/SaiG18)
 #
 # <bitbar.title>Lapse</bitbar.title>
 # <bitbar.version>v1.0</bitbar.version>
