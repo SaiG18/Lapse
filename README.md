@@ -11,7 +11,5 @@
 
 
 
-
-# Usage
 <img width="418" alt="lapse" src="https://user-images.githubusercontent.com/9091157/53530475-f3801c00-3abd-11e9-8179-8c35317b6929.png">
 
