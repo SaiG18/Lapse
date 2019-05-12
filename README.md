@@ -1,4 +1,4 @@
-# Lapse - Life Progress Menu Bar App for macOS
+# Lapse - Life progress bars to enhance productivity
 
 ## Setup
 
